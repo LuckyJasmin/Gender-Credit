@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{{ formfield_errors 'slider1' }}
+{% block title %}
+<div style ="display: flex; align-items: center;justify-content: center;">
+    <strong> Page {{ subsession.round_number }} of {{ Constants.num_rounds }} </strong> - Slider Task
+                </div>
+{% endblock %}
+
+
+{% block content %}
+
+
+    <div style ="display: flex; align-items: center;justify-content: center;">
+<p>Please set the slider to {{ slider_goals_this_round}}</p >
+                </div>
+    <div style ="display: flex; align-items: center;justify-content: center;">
+
+        <div class = "Player(BasePlayer)">
+            <input name="slider1" type="range" id="myRange" min="0" max="100" value="0" step="1" oninput="myFunction(this.value)">
+    </div>
+            </div>
+        <div style ="display: flex; align-items: center;justify-content: center;">
+
+
+            <p>Your current position is: <span id="slider1"></span></p>
+
+
+<script>
+function myFunction() {
+var x = document.getElementById("myRange").value;
+document.getElementById("slider1").innerHTML = x;
+}
+</script>
+
+</div>
+
+    <div style ="display: flex; align-items: center;justify-content: center;">
+    {% next_button %}
+                            </div>
+{% endblock %}

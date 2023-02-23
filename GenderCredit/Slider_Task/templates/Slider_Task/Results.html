@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+
+        <div style ="display: flex; align-items: center;justify-content: center;">
+   Results
+        </div>
+
+{% endblock %}
+
+{% block content %}
+
+<p> You played the Sliders Task game and you completed {{ subsession.round_number }} rounds. Below are your results. </p>
+
+
+<h4> Round History </h4>
+<table class = "table">
+    <tr>
+        <th>Round</th>
+        <th>Number of Sliders Correct</th>
+    </tr>
+    {% for p in player_in_all_rounds %}
+        <tr>
+            <td>{{ p.round_number }}</td>
+            <td>{{ p.total_sliders_correct }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<p> You correctly completed {{ total_sliders_correct }} sliders overall.  Each correct slider receives {{10|c}}. Your total payoff is {{ total_payoff }}. </p>
+
+
+        <div style ="display: flex; align-items: center;justify-content: center;">
+    {% next_button %}
+        </div>
+{% endblock %}

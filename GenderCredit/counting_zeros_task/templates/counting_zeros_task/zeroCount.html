@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+<div style ="display: flex; align-items: center;justify-content: center;">
+
+    <strong> Round {{ subsession.round_number }} of {{ Constants.num_rounds }} </strong> - Counting Zeros Task
+            </div>
+{% endblock %}
+
+
+{% block content %}
+
+<div style ="display: flex; align-items: center;justify-content: center;">
+<img src="{{ Constants.STATIC_URL }}{{image_path}}"/>
+
+    </div>
+<div style ="display: flex; align-items: center;justify-content: center;">
+
+{% formfields %}
+    </div>
+<div style ="display: flex; align-items: center;justify-content: center;">
+
+        {% next_button %}
+    </div>
+
+
+
+
+
+{% endblock %}

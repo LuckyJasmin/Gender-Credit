@@ -1,0 +1,36 @@
+#to start a otree project, need enter
+"otree startproject **" in the terminal, ** refers to the project name
+
+#change the direction to the project file, need enter
+"cd **" in the terminal, ** refers to the path of the project
+
+#to run the code in a webpage, need enter
+"otree devserver" in the terminal
+
+#run otree update_my_code, which will tell you the changes you need to make before your code can run on oTree Lite
+
+
+#when see an error like: [Errno 48] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+step 1: To find the process id (PID) associated with the port, enter
+        lsof -i:8000
+step 2: To kill the process, enter
+        kill -9 PID
+details plz see https://levelup.gitconnected.com/how-to-kill-server-when-seeing-eaddrinuse-address-already-in-use-16c4c4d7fe5d
+
+
+'''
+a useful link which introduces how to set slider
+https://groups.google.com/g/otree/c/5J-2Jv73m3U
+'''
+
+
+
+
+
+a model is essentially a database table. And a field is a column in a table.
+
+
+        {% formfield player.slider2 %}
+
+
+
